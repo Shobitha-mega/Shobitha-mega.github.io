@@ -3,23 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name – Portfolio</title>
+  <title>SHOBITHA MEGA — Business Analytics Portfolio</title>
+  <meta name="description" content="Business Analytics student in Adelaide. Projects in SQL, Python, Power BI, Tableau, and Excel.">
   <style>
-    body { font-family: system-ui, Arial, sans-serif; margin: 0; line-height: 1.6; }
-    header { padding: 64px 20px; text-align: center; }
-    h1 { margin: 0 0 8px; font-size: 2rem; }
-    p.lead { margin: 0 auto; max-width: 640px; opacity: 0.9; }
-    .cta { display:inline-block; margin-top:16px; padding:10px 16px; border-radius:12px; text-decoration:none; border:1px solid #ccc; }
-    footer { text-align:center; padding:24px; font-size: 0.9rem; color:#666; border-top:1px solid #eee; }
+    :root { --max: 980px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, Arial, sans-serif; line-height: 1.6; }
+    header, main, footer { width: min(100%, var(--max)); margin: 0 auto; padding: 0 20px; }
+    nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; }
+    nav .wrap { width: min(100%, var(--max)); margin: 0 auto; display: flex; gap: 16px; align-items: center; padding: 10px 20px; }
+    nav a { text-decoration: none; color: #111; opacity: 0.9; }
+    nav a:hover { text-decoration: underline; }
+    .hero { padding: 56px 0 24px; text-align: left; }
+    .hero h1 { margin: 0 0 8px; font-size: 2.2rem; }
+    .muted { color: #555; max-width: 60ch; }
+    .row { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 720px) { .row { grid-template-columns: repeat(3, 1fr); } }
+    .card { padding: 16px; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.03); background: #fff; }
+    .cta { display: inline-block; padding: 10px 16px; border-radius: 12px; border: 1px solid #ccc; text-decoration: none; }
+    section { padding: 28px 0; }
+    h2 { margin: 0 0 12px; font-size: 1.4rem; }
+    ul { padding-left: 18px; }
+    footer { text-align: center; color: #666; border-top: 1px solid #eee; padding: 24px 0 40px; margin-top: 20px; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p class="lead">Business Analytics student in Adelaide. I turn messy data into useful decisions. Here’s my work, skills, and story.</p>
-    <a class="cta" href="mailto:you@example.com">Email me</a>
+  <nav>
+    <div class="wrap">
+      <strong>SHOBITHA MEGA</strong>
+      <span style="flex:1"></span>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Business Analytics student in Adelaide</h1>
+    <p class="muted">
+      I turn messy data into useful decisions. This site shows a few projects in
+      SQL, Python, Power BI, Tableau, and Excel—with concise write-ups focused on outcomes.
+    </p>
+    <p style="margin-top:14px;">
+      <a class="cta" href="shobithamega@gmail.com">Email me</a>
+      &nbsp;·&nbsp;
+      <a class="cta" href="https://www.linkedin.com/in/shobitha-mega-6b70b3127/">LinkedIn</a>
+    </p>
   </header>
-  <footer>© <span id="y"></span> Your Name</footer>
+
+  <main>
+    <section id="about">
+      <h2>About me</h2>
+      <p>
+        I’m SHOBITHA MEGA, currently pursuing a Master of Business Analytics at the University of Adelaide (graduating Dec 2025).
+        I enjoy turning stakeholder problems into clean datasets, clear visuals, and practical recommendations.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Data:</strong> SQL, Python (pandas, scikit-learn), Excel (Pivot, Power Query)</li>
+        <li><strong>Viz & BI:</strong> Power BI (PL-300 track), Tableau</li>
+        <li><strong>Methods:</strong> EDA, feature engineering, regression/classification, dashboards, KPI design</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects (quick view)</h2>
+      <div class="row">
+        <div class="card">
+          <h3 style="margin-top:0;">HR Attrition Analysis (Power BI)</h3>
+          <p>Interactive dashboard highlighting drivers of churn and a simple predictive view for at-risk groups.</p>
+          <p><a href="#" aria-label="Project link">View</a></p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">IPO Fees Regression (Python)</h3>
+          <p>Built a regression model to estimate fees using financial and categorical inputs; clear takeaways for finance teams.</p>
+          <p><a href="#" aria-label="Project link">View</a></p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0;">Customer Feedback Classifier (SQL + Python)</h3>
+          <p>Pipeline to label themes from text and surface actions; improved response prioritisation for support.</p>
+          <p><a href="#" aria-label="Project link">View</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Best way to reach me is email: <a href="shobithamega@gmail.com">YOUR.EMAIL@EXAMPLE.COM</a>.</p>
+    </section>
+  </main>
+
+  <footer>© <span id="y"></span> SHOBITHA MEGA</footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
